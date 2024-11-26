@@ -1,0 +1,31 @@
+<div class="book-grid">
+    <div class="book-card" *ngFor="let book of books">
+      <img class="book-card__image" [src]="book.coverImage" [alt]="book.title" />
+  
+      <h3 class="book-card__title">{{ book.title }}</h3>
+  
+      <p class="book-card__author"><strong>Author:</strong> {{ book.author }}</p>
+      <p class="book-card__genre"><strong>Genre:</strong> {{ book.genre }}</p>
+      <p class="book-card__rating">
+        <strong>Rating:</strong>
+        <span class="stars">
+          <span *ngFor="let star of [].constructor(book.rating)">★</span>
+          <span *ngFor="let emptyStar of [].constructor(5 - book.rating)">☆</span>
+        </span>
+      </p>
+  
+      <span
+        class="badge badge--available"
+        *ngIf="book.isAvailable"
+        >Available</span
+      >
+      <span
+        class="badge badge--unavailable"
+        *ngIf="!book.isAvailable"
+        >Unavailable</span
+      >
+  
+      <button class="button button--details">View Details</button>
+    </div>
+  </div>
+  

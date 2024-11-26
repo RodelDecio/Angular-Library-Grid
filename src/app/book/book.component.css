@@ -1,0 +1,95 @@
+
+.book-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Mobile */
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .book-grid {
+      grid-template-columns: repeat(3, 1fr); /* Tablet */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .book-grid {
+      grid-template-columns: repeat(5, 1fr); /* Desktop */
+    }
+  }
+  
+ 
+  .book-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .book-card__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .book-card__title {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .book-card__author,
+  .book-card__genre,
+  .book-card__rating {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .stars {
+    color: #ffcc00;
+  }
+  
+  .badge {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .badge--available {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .badge--unavailable {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+  }
+  
+  .button:hover {
+    background-color: #218838;
+  }
+  
